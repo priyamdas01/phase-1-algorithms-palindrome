@@ -1,6 +1,20 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  if (word.length === 1){
+    return true;
+  }else{
+    let backwardLtr = word.length-1;
+    for (let i = 0; i<Math.ceil(word.length/2); i++){
+      if(word[i] === word[backwardLtr]){
+        backwardLtr--;
+      }else{
+        return false;
+      }
+    }
+    return true;
+  }
 }
+// console.log(isPalindrome("aa"))
 
 /* 
   Add your pseudocode here
